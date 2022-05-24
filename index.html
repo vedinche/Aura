@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,11 +9,114 @@
 	<title>Aura - коллекция стикеров</title>
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 	<header class="header">
 		<div class="container flex">
-			
+			<a class="logo">
+				<img src="assets/svg/logo.svg" alt="Логотип компании аура">
+			</a>
+			<nav class="nav">
+				<ul class="nav__list list-reset flex">
+					<li class="nav__item">
+						<a href="" class="nav__link">
+							Авторы
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="" class="nav__link">
+							Коллекции
+						</a>
+					</li>
+					<li class="nav__item">
+						<a href="" class="nav__link">
+							Сервисы
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<button class="header__btn btn-reset">Кошелёк</button>
 		</div>
 	</header>
+
+	<main>
+		<section class="hero">
+			<div class="container">
+				<h1 class="hero__title">
+					Площадка для реализации криптостикеров
+				</h1>
+				<div class="hero__buttons">
+					<a href="#" class="btn hero__btn hero__btn--fill">
+						Купить
+					</a>
+					<a href="#" class="btn hero__btn hero__btn--stroke">
+						Стать автором
+					</a>
+				</div>
+			</div>
+		</section>
+		<section class="auction">
+			<div class="container">
+				<h2 class="title auction__title">
+					Аукцион
+					<span class="auction__state">
+						Live auction
+					</span>
+				</h2>
+			</div>
+			<div class="auction__content">
+				<div class="auction__img">
+					<img src="assets/img/sticker-1.png" alt="Стикер witcher">
+				</div>
+				<div class="auction__info">
+					<div class="auction-owner">
+						<img class="auction-owner__avatar" src="assets/img/avatar.png" alt="Аватарка владельца Serge">
+						<span class="auction__nickname">
+							Serge_VM222
+						</span>
+					</div>
+					<h3 class="auction__subtitle">
+						Witcherr_3 (xml_t5)
+					</h3>
+					<div class="auction__props">
+						<div class="auction-bet">
+							<span class="auction-bet__title">
+								Ставка:
+							</span>
+							<span class="auction-bet__price">
+								0.10 ETH
+							</span>
+							<span class="auction-bet__price-dollars">
+								$351
+							</span>
+						</div>
+						<div class="auction-timer">
+							<span class="auction-timer__title">
+								Окончание через:
+							</span>
+							<div class="auction-timer__content">
+								<div class="auction-timer__time">
+									<span class="auction-timer__value">01</span>
+									<span class="auction-timer__text">Час</span>
+								</div>
+								<div class="auction-timer__time">
+									<span class="auction-timer__value">48</span>
+									<span class="auction-timer__text">Мин</span>
+								</div>
+								<div class="auction-timer__time">
+									<span class="auction-timer__value">47</span>
+									<span class="auction-timer__text">Сек</span>
+								</div>
+							</div>
+							<button class="btn btn-reset">
+								Сделать ставку
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
 </body>
+
 </html>
