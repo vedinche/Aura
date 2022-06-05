@@ -35,7 +35,7 @@
 					</li>
 				</ul>
 			</nav>
-			<button class="header__btn btn-reset">Кошелёк</button>
+			<button class="btn btn-reset header__btn">Кошелёк</button>
 		</div>
 	</header>
 
@@ -118,7 +118,7 @@
 		</section>
 		<section class="auctions">
 			<div class="container">
-				<h2 class="auctions__title">
+				<h2 class="second-title auctions__title">
 					Другие аукционы
 				</h2>
 				<ul class="auctions__list list-reset">
@@ -294,6 +294,79 @@
 				<button class="btn btn--stroke btn-reset">
 					Все аукционы
 				</button>
+			</div>
+		</section>
+		<section class="new">
+			<div class="container">
+				<h2 class="title new__title">
+					Новые стикеры
+				</h2>
+				<div class="new__slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="new__sticker">
+								<img src="assets/img/new-1.png" alt="Изображение стикера">
+								<img src="assets/img/new-2.png" alt="Изображение стикера">
+								<img src="assets/img/new-3.png" alt="Изображение стикера">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="subscribe">
+			<div class="container">
+				<h2 class="second-title subscribe__title">
+					Будь в&nbsp;курсе новинок! Подпишись на&nbsp;рассылку!
+				</h2>
+				<form class="subscribe-form" action="#">
+					<input class="form-input subscrine-form__input" type="text" placeholder="Имя" name="name">
+					<input class="form-input subscrine-form__input" type="email" placeholder="E-mail" name="mail">
+					<button class="btn btn--fill btn-reset">
+						Подписаться
+					</button>
+					<label class="checkbox">
+						<input class="checkbox__input" type="checkbox" name="checkbox">
+						<span class="checkbox__text">
+							Согласен на&nbsp;обработку персональных данных
+						</span>
+					</label>
+				</form>
+			</div>
+		</section>
+		<section class="become-author">
+			<div class="container">
+				<h2 class="title">
+					Стать автором
+				</h2>
+				<div class="become-author__content">
+					<div class="become-author__text">
+						<p class="become-author__descr">
+							<strong>
+								Если ты&nbsp;художник или стремишься им&nbsp;стать&nbsp;&mdash; добро пожаловать к&nbsp;нам!
+							</strong>
+						</p>
+						<p class="become-author__descr">
+							Отправь нам от&nbsp;трёх до&nbsp;пяти своих работ и&nbsp;напиши свой ник в&nbsp;телеграме. Если наши
+							кураторы решат, что нам по&nbsp;пути, то&nbsp;мы&nbsp;обязательно свяжемся с&nbsp;тобой и&nbsp;обговорим
+							условия сотрудничества! <b>Удачи!</b>
+						</p>
+						<img class="become-author__decorate" src="assets/img/decorate.jpg" alt="" aria-hidden="true">
+					</div>
+					<form  class="become-author-form" action="#">
+						<label class="file">
+							<input class="file__input" type="file" name="file" accept="image/*">
+						</label>
+						<span class="file__icon"></span>
+						<span class="file__text">
+							Прикрепить работы (.jpeg / .png)
+						</span>
+						<input class="form-input become-author-form__input" type="text" placeholder="@telegram_nickname" name="nickname">
+						<button class="btn btn--fill btn-reset">
+							Отправить
+						</button>
+					</form>
+				</div>
 			</div>
 		</section>
 	</main>
