@@ -39,11 +39,15 @@ p {
 	cursor: pointer;
 }
 
+.flex {
+	display: flex;
+}
+
 @font-face {
 	font-family: 'Muller';
-	src: local('Muller-Regular'),
-	url('../assets/fonts/muller-regular.woff2') format('woff2'),
-	url('../assets/fonts/muller-regular.woff') format('woff');
+	src: local('MullerRegular'),
+	url('../assets/fonts/MullerRegular.woff2') format('woff2'),
+	url('../assets/fonts/MullerRegular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -51,9 +55,9 @@ p {
 
 @font-face {
 	font-family: 'Muller';
-	src: local('Muller-Bold'),
-	url('../assets/fonts/muller-bold.woff2') format('woff2'),
-	url('../assets/fonts/muller-bold.woff') format('woff');
+	src: local('MullerBold'),
+	url('../assets/fonts/MullerBold.woff2') format('woff2'),
+	url('../assets/fonts/MullerBold.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -61,7 +65,7 @@ p {
 
 @font-face {
 	font-family: 'Russo';
-	src: local('Russo-Regular'),
+	src: local('RussoRegular'),
 	url('../assets/fonts/russo-one.woff2') format('woff2'),
 	url('../assets/fonts/russo-one.woff') format('woff');
 	font-weight: 400;
@@ -69,12 +73,53 @@ p {
 	font-display: swap;
 }
 
+:root {
+	--color-light: #fff;
+	--color-dark: #07060B;
+	--gap: 32px;
+}
+
+
 body {
 	font-family: 'Muller', sans-serif;
+	font-size: 20px;
 }
 
 .container {
 	margin: 0 auto;
-	padding: 0 12px;
-	min-width: 1304px;
+	padding: 20px 0;
+	max-width: 1304px;
+}
+
+.header {
+	padding: 0 10px;
+	background-color: var(--color-light);
+}
+
+.header__container {
+	align-items: center;
+}
+
+.header__logo {
+	margin-right: calc(var(--gap)*2);
+}
+
+.header__nav {
+	margin-right: auto;
+	font-weight: 700;
+}
+
+.nav__item:not(:last-child) {
+	margin-right: var(--gap);
+}
+
+.header__btn {
+	padding: 17px 4px;
+	min-width: 132px;
+	border-radius: 77px;
+	font-size: 16px;
+	line-height: 16px;
+	font-weight: 700;
+	color: var(--color-light);
+	background: var(--color-dark);
 }
