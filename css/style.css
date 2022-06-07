@@ -76,7 +76,14 @@ p {
 :root {
 	--color-light: #fff;
 	--color-dark: #07060B;
+	--color-primary: #46f4db;
+	--color-primary-active: #57d272;
 	--gap: 32px;
+	--time: .3s;
+	--style: ease-in-out;
+	--focus-transition: outline-color var(--time) var(--style);
+	--color-transition: color var(--time) var(--style);
+	--bg-transition: background-color var(--time) var(--style);
 }
 
 
@@ -106,11 +113,30 @@ body {
 
 .header__nav {
 	margin-right: auto;
-	font-weight: 700;
 }
 
 .nav__item:not(:last-child) {
 	margin-right: var(--gap);
+}
+
+.nav__link {
+	font-weight: 700;
+	outline-color: transparent;
+	transition: color var(--time) var(--style);
+}
+
+.nav__link:focus-visible {
+	outline: 2px solid var(--color-primary-active);
+	outline-offset: 10px;
+	transition: var(--focus-transition);
+}
+
+.nav__link:hover {
+	color: var(--color-primary);
+}
+
+.nav__link:active {
+	color: var(--color-primary-active);
 }
 
 .header__btn {
@@ -122,4 +148,21 @@ body {
 	font-weight: 700;
 	color: var(--color-light);
 	background: var(--color-dark);
+	transition: var(--color-transition), var(--bg-transition);
+}
+
+.header__btn:focus {
+	outline: none;
+	background: var(--color-primary);
+	color: var(--color-dark);
+}
+
+.header__btn:hover {
+	background-color: var(--color-primary);
+	color: var(--color-dark);
+}
+
+.header__btn:active {
+	background-color: var(--color-primary-active);
+	color: var(--color-dark);
 }
