@@ -1,12 +1,12 @@
 html {
-  box-sizing: border-box;
-  scroll-behavior: smooth;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
 }
 
 *,
 *::before,
 *::after {
-  box-sizing: inherit;
+	box-sizing: inherit;
 }
 
 a {
@@ -46,8 +46,8 @@ p {
 @font-face {
 	font-family: 'Muller';
 	src: local('MullerRegular'),
-	url('../assets/fonts/MullerRegular.woff2') format('woff2'),
-	url('../assets/fonts/MullerRegular.woff') format('woff');
+		url('../assets/fonts/MullerRegular.woff2') format('woff2'),
+		url('../assets/fonts/MullerRegular.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -56,8 +56,8 @@ p {
 @font-face {
 	font-family: 'Muller';
 	src: local('MullerBold'),
-	url('../assets/fonts/MullerBold.woff2') format('woff2'),
-	url('../assets/fonts/MullerBold.woff') format('woff');
+		url('../assets/fonts/MullerBold.woff2') format('woff2'),
+		url('../assets/fonts/MullerBold.woff') format('woff');
 	font-weight: 700;
 	font-style: normal;
 	font-display: swap;
@@ -66,8 +66,8 @@ p {
 @font-face {
 	font-family: 'Russo';
 	src: local('RussoRegular'),
-	url('../assets/fonts/russo-one.woff2') format('woff2'),
-	url('../assets/fonts/russo-one.woff') format('woff');
+		url('../assets/fonts/russo-one.woff2') format('woff2'),
+		url('../assets/fonts/russo-one.woff') format('woff');
 	font-weight: 400;
 	font-style: normal;
 	font-display: swap;
@@ -98,6 +98,7 @@ body {
 	max-width: 1304px;
 }
 
+/* header start */
 .header {
 	padding: 0 10px;
 	background-color: var(--color-light);
@@ -166,3 +167,50 @@ body {
 	background-color: var(--color-primary-active);
 	color: var(--color-dark);
 }
+
+/* header end */
+
+/* hero start */
+.hero {
+	padding: 160px 0;
+	background-color: var(--color-dark);
+	background-image: url(../assets/img/hero-bg.png);
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.hero__title {
+	font-family: 'Russo', sans-serif;
+	margin-bottom: 36px;
+	width: 50%;
+	color: var(--color-light);
+	font-weight: 400;
+	font-size: 70px;
+	line-height: 84px;
+}
+
+.hero__btn {
+	display: inline-block;
+	border-radius: 40px;
+	outline: none;
+	text-align: center;
+	font-weight: 700;
+	color: var(--color-dark);
+}
+
+.hero__btn--fill {
+	padding: 25px 4px;
+	margin-right: var(--gap);
+	min-width: 176px;
+	background: linear-gradient(180deg, #46F4DB 27.08%, #57D272 100%);
+	;
+}
+
+.hero__btn--stroke {
+	padding: 20px 4px;
+	min-width: 247px;
+	border: 5px solid var(--color-primary);
+	color: var(--color-light);
+}
+
+/* hero end */
