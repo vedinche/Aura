@@ -76,6 +76,9 @@ p {
 :root {
 	--color-light: #fff;
 	--color-dark: #07060B;
+	--color-red: #d13130;
+	--color-athens: #ededf2;
+	--color-gray: #95959d;
 	--color-primary: #46f4db;
 	--color-primary-active: #57d272;
 	--color-gradient: linear-gradient(180deg, #46F4DB 27.08%, #57D272 100%);
@@ -91,21 +94,116 @@ p {
 body {
 	font-family: 'Muller', sans-serif;
 	font-size: 20px;
+	line-height: 20px;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 10px;
+	max-width: 1300px;
 }
 
 .section-offset {
 	margin-bottom: 90px;
 }
 
-.container {
-	margin: 0 auto;
-	padding: 20px 0;
-	max-width: 1304px;
+.title {
+	margin-bottom: var(--gap);
+	font-family: 'Russo', sans-serif;
+	font-weight: 400;
+	font-size: 60px;
+	line-height: 72px;
+	color: var(--color-dark);
+}
+
+.second-title {
+	font-family: 'Russo', sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	line-height: 24px;
+}
+
+.btn {
+	position: relative;
+	min-width: 296px;
+	padding: 25px 4px;
+	border-radius: 40px;
+	outline: none;
+	font-weight: 700;
+	background: transparent;
+}
+
+.btn::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	border-radius: inherit;
+	background: var(--color-gradient);
+	opacity: 0;
+	transition: opacity var(--time) var(--style);
+}
+
+.btn::after {
+content: '';
+position: absolute;
+left: 0;
+right: 0;
+top: 0;
+bottom: 0;
+border-radius: inherit;
+background: var(--color-primary-active);
+opacity: 0;
+transition: opacity var(--time) var(--style);
+}
+
+.btn__text {
+	position: relative;
+	z-index: 5;
+}
+
+.btn--fill {
+	background: var(--color-primary);
+}
+
+.btn--fill:focus::before {
+	opacity: 1;
+}
+
+.btn--fill:hover::before {
+	opacity: 1;
+}
+
+.btn--fill:active::after {
+	opacity: 1;
+}
+
+.btn--stroke {
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 20px;
+	outline: 5px solid var(--color-primary);
+	transition: var(--bg-transition), var(--focus-transition);
+}
+
+.btn--stroke:focus {
+	background: var(--color-primary);
+}
+
+.btn--stroke:hover {
+	background: var(--color-primary);
+}
+
+.btn--stroke:active {
+	outline-color: var(--color-primary-active);
+	background: var(--color-primary-active);
 }
 
 /* header start */
 .header {
-	padding: 0 10px;
+	padding: 10px 0;
 	background-color: var(--color-light);
 }
 
@@ -287,4 +385,219 @@ body {
 .hero__btn:active::after {
 	opacity: 1;
 }
+
 /* hero end */
+
+/* auction start */
+.auction__title {
+	display: inline-flex;
+	align-items: center;
+}
+
+.auction__state {
+	display: inline-flex;
+	align-items: center;
+	padding: 10px 15px;
+	border: 2px solid currentColor;
+	border-radius: 40px;
+	font-family: 'Muller', sans-serif;
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 16px;
+	color: var(--color-red);
+	transform: translateX(16px);
+}
+
+.auction__state::before {
+	content: '';
+	margin-right: 5px;
+	border-radius: 100%;
+	width: 6px;
+	height: 6px;
+	background: currentColor;
+}
+
+.auction__img {
+	margin-right: var(--gap);
+}
+
+.auction__info {
+	width: calc(100% - 460px - var(--gap));
+}
+
+.owner {
+	display: inline-flex;
+	align-items: center;
+	font-weight: 700;
+}
+
+.auction__owner {
+	margin-bottom: var(--gap);
+	padding: 11px 16px;
+	border-radius: 23px;
+	background: var(--color-athens);
+	color: var(--color-dark);
+}
+
+.auction__owner-avatar {
+	margin-right: 16px;
+}
+
+.auction__subtitle {
+	margin-bottom: var(--gap);
+	font-weight: 400;
+	font-size: 48px;
+	line-height: 48px;
+	color: var(--color-dark);
+}
+
+.auction__props {
+	margin-bottom: var(--gap);
+}
+
+.auction-bet {
+	flex-direction: column;
+	margin-right: var(--gap);
+	padding: var(--gap);
+	padding-right: 57px;
+	border-radius: 40px;
+	background: var(--color-athens);
+}
+
+.auction-bet__title {
+	margin-bottom: 16px;
+	font-weight: 700;
+	color: var(--color-dark);
+}
+
+.auction-bet__price {
+	margin-bottom: 6px;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 48px;
+	color: var(--color-dark);
+}
+
+.auction-bet__price-dollars {
+	font-weight: 700;
+	color: var(--color-gray);
+}
+
+.auction-timer {
+	flex-grow: 1;
+	padding: var(--gap);
+	border-radius: 40px;
+	background: var(--color-dark);
+	color: var(--color-light);
+	background-image: url('../assets/svg/clock.svg');
+	background-repeat: no-repeat;
+	background-position: calc(100% - var(--gap));
+	background-size: 121px 121px;
+}
+
+.auction-timer__title {
+	display: inline-block;
+	font-weight: 700;
+	margin-bottom: 16px;
+}
+
+.auction-timer__time {
+	flex-direction: column;
+	align-items: center;
+}
+
+.auction-timer__time:not(:last-child) {
+	margin-right: 26px;
+}
+
+.auction-timer__value {
+	margin-bottom: 6px;
+	font-weight: 700;
+	font-size: 48px;
+	line-height: 48px;
+}
+
+.auction-timer__text {
+	font-weight: 700;
+}
+/* auction end */
+
+/* auctions start */
+.auctions__title {
+	margin-bottom: var(--gap);
+}
+
+.auctions__list {
+	flex-wrap: wrap;
+}
+
+.auctions__item {
+	width: 296px;
+	margin-bottom: var(--gap);
+}
+
+.auctions__item:not(:nth-child(4n)) {
+	margin-right: var(--gap);
+}
+
+.auctions-product__img {
+	justify-content: center;
+	padding: 7px;
+	border-top-left-radius: 40px;
+	border-top-right-radius: 40px;
+	background: var(--color-athens);
+}
+
+.auctions-product__info {
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 16px;
+	padding-bottom: 32px;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+	color: var(--color-light);
+	background: var(--color-dark);
+}
+
+.auctions-product__avatar {
+	margin-right: 8px;
+}
+
+.auctions-product__nickname {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 16px;
+}
+
+.auctions-product__owner {
+	margin-bottom: 16px;
+}
+
+.auctions-product__subtitle {
+	margin-bottom: 12px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 20px;
+}
+
+.auctions-product__price {
+	margin-bottom: 11px;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 20px;
+	color: var(--color-primary);
+}
+
+.auctions-product__timer {
+	font-weight: 700;
+	font-size: 16px;
+	line-height: 16px;
+	color: var(--color-gray);
+}
+
+.auctions__btn {
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+}
+/* auctions end */
