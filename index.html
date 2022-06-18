@@ -8,10 +8,12 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Aura - коллекция стикеров</title>
 	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/swiper.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
 	<header class="header">
 		<div class="container header__container flex">
 			<a class="logo header__logo">
@@ -331,21 +333,40 @@
 			</div>
 		</section>
 		<section class="new section-offset">
-			<div class="container">
+			<div class="container new__container">
 				<h2 class="title new__title">
 					Новые стикеры
 				</h2>
 				<div class="new__slider">
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
-							<div class="new__sticker">
-								<img src="assets/img/new-1.png" alt="Изображение стикера">
-								<img src="assets/img/new-2.png" alt="Изображение стикера">
-								<img src="assets/img/new-3.png" alt="Изображение стикера">
+							<div class="new__sticker flex">
+								<img src="assets/img/slider/new-1.png" alt="Изображение стикера">
+								<img src="assets/img/slider/new-2.png" alt="Изображение стикера">
+								<img src="assets/img/slider/new-3.png" alt="Изображение стикера">
 							</div>
 						</div>
-					</div>
+						<div class="swiper-slide">
+							<div class="new__sticker flex">
+								<img src="assets/img/slider/new-4.png" alt="Изображение стикера">
+								<img src="assets/img/slider/new-5.png" alt="Изображение стикера">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="new__sticker flex">
+								<img src="assets/img/slider/new-6.png" alt="Изображение стикера">
+								<img src="assets/img/slider/new-7.png" alt="Изображение стикера">
+								<img src="assets/img/slider/new-8.png" alt="Изображение стикера">
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="new__sticker flex">
+								<img src="assets/img/slider/new-9.png" alt="Изображение стикера">
+							</div>
+						</div>
+					</div>					
 				</div>
+				<div class="new__pagination swiper-pagination"></div>
 			</div>
 		</section>
 		<section class="subscribe section-offset">
@@ -357,7 +378,9 @@
 					<input class="form-input subscrine-form__input" type="text" placeholder="Имя" name="name">
 					<input class="form-input subscrine-form__input" type="email" placeholder="E-mail" name="mail">
 					<button class="btn btn--fill btn-reset">
+						<span class="btn__text">
 						Подписаться
+						</span>
 					</button>
 					<label class="checkbox">
 						<input class="checkbox__input" type="checkbox" name="checkbox">
@@ -602,6 +625,9 @@
 			</div>
 		</div>
 	</footer>
+
+	<script src="js/swiper-min.js"></script>
+	<script src="js/script.js"></script>
 </body>
 
 </html>

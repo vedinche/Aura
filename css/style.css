@@ -601,3 +601,61 @@ transition: opacity var(--time) var(--style);
 	transform: translate(-50%, 0);
 }
 /* auctions end */
+
+/* new start */
+.new {
+	padding: 90px;
+	background: var(--color-dark);
+}
+
+.new__title {
+	margin-bottom: var(--gap);
+	padding-left: 64px;
+	color: var(--color-light);
+	background-image: url('../assets/img/fire.png');
+	background-position: left center;
+	background-repeat: no-repeat;
+	background-size: 48px 48px;
+}
+
+.new__slider {
+	width: 100%;
+	margin-bottom: 64px;
+	overflow: hidden;
+}
+
+.new__sticker img:not(:last-child) {
+	margin-right: 28px;
+}
+
+.new__pagination {
+	position: initial;
+}
+
+.swiper-pagination-bullet {
+	width: auto;
+	height: auto;
+	padding: 10px 23px;
+	border: 2px solid var(--color-red);
+	border-radius: 40px;
+	font-weight: 700;
+	font-style: 16px;
+	line-height: 16px;
+	color: var(--color-light);
+	background-color: transparent;
+	opacity: 1;
+	transition: var(--bg-transition);
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet:not(:last-child) {
+	margin-right: 20px;
+}
+
+.swiper-pagination-bullet-active {
+	background: var(--color-red);
+}
+/* new end */
