@@ -201,6 +201,18 @@ transition: opacity var(--time) var(--style);
 	background: var(--color-primary-active);
 }
 
+.form-input {
+	width: 100%;
+	padding-left: var(--gap);
+	width: 100%;
+	height: 70px;
+	border: none;
+	border-radius: 40px;
+	font-weight: 400;
+	font-style: 20px;
+	line-height: 20px;
+}
+
 /* header start */
 .header {
 	padding: 10px 0;
@@ -604,7 +616,7 @@ transition: opacity var(--time) var(--style);
 
 /* new start */
 .new {
-	padding: 90px;
+	padding: 90px 0;
 	background: var(--color-dark);
 }
 
@@ -659,3 +671,95 @@ transition: opacity var(--time) var(--style);
 	background: var(--color-red);
 }
 /* new end */
+
+/* subscribe start */
+.subscribe {
+ background: var(--color-red);
+}
+
+.subscribe__container {
+	padding: var(--gap) 0;
+	background-image: url('../assets/img/subscribe-bg.png');
+	background-position: right center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.subscribe__title {
+	margin-bottom: var(--gap);
+	color: var(--color-light);
+}
+
+.subscribe-form {
+	flex-direction: column;
+	align-items: flex-start;
+	max-width: 460px;
+}
+
+.subscribe-form__input {
+	margin-bottom: 16px;
+	outline: none;
+	color: var(--color-light);
+	background: var(--color-dark);
+	transition: outline var(--time) var(--style), var(--bg-transition);
+}
+
+.subscribe-form__input::placeholder {
+	color: var(--color-athens);
+}
+
+.subscribe-form__input:focus {
+	outline: 2px solid var(--color-dark);
+	background: var(--color-red);
+}
+
+.subscribe-form__input:hover {
+	background: rgba(7, 6, 11, 0.7);
+}
+
+.subscribe-form__btn {
+	margin-bottom: 16px;
+}
+
+.checkbox {
+	position: relative;
+	user-select: none; /*убрать выделение текста по клику*/
+}
+
+.checkbox__input {
+	position: absolute;
+	opacity: 0;
+}
+
+.checkbox__text {
+	border: 1px solid transparent;
+	position: relative;
+	display: inline-flex;
+	align-items: center;
+	font-weight: 700;
+	font-size: 12px;
+	line-height: 12px;
+	color: var(--color-light);
+}
+
+.checkbox__text::before {
+	content: '';
+	border: 1px solid currentColor;
+	margin-right: 8px;
+	width: 14px;
+	height: 14px;
+	background-image: url('../assets/svg/check.svg');
+	background-position: center;
+	background-size: 80%;
+	background-repeat: no-repeat;
+	transition: var(--bg-transition);
+}
+
+.checkbox__input:checked + .checkbox__text::before {
+	background-image: none;
+}
+
+.checkbox__input:focus-visible + .checkbox__text {
+	border-color: var(--color-light);
+}
+/* subscribe end */
