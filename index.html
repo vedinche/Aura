@@ -364,7 +364,7 @@
 								<img src="assets/img/slider/new-9.png" alt="Изображение стикера">
 							</div>
 						</div>
-					</div>					
+					</div>
 				</div>
 				<div class="new__pagination swiper-pagination"></div>
 			</div>
@@ -379,7 +379,7 @@
 					<input class="form-input subscribe-form__input" type="email" placeholder="E-mail" name="mail">
 					<button class="btn btn--fill btn-reset subscribe-form__btn">
 						<span class="btn__text">
-						Подписаться
+							Подписаться
 						</span>
 					</button>
 					<label class="checkbox">
@@ -393,35 +393,33 @@
 		</section>
 		<section class="become-author section-offset">
 			<div class="container">
-				<h2 class="title">
-					Стать автором
-				</h2>
-				<div class="become-author__content">
+				<div class="become-author__content flex">
 					<div class="become-author__text">
-						<p class="become-author__descr">
-							<strong>
-								Если ты&nbsp;художник или стремишься им&nbsp;стать&nbsp;&mdash; добро пожаловать к&nbsp;нам!
-							</strong>
+						<h2 class="title become-author__title">
+							Стать автором
+						</h2>
+						<p class="become-author__subtitle">
+							Если ты&nbsp;художник или стремишься им&nbsp;стать&nbsp;&mdash; добро пожаловать к&nbsp;нам!
 						</p>
 						<p class="become-author__descr">
 							Отправь нам от&nbsp;трёх до&nbsp;пяти своих работ и&nbsp;напиши свой ник в&nbsp;телеграме. Если наши
-							кураторы решат, что нам по&nbsp;пути, то&nbsp;мы&nbsp;обязательно свяжемся с&nbsp;тобой и&nbsp;обговорим
+							кураторы решат, что нам по&nbsp;пути, то мы&nbsp;обязательно свяжемся с&nbsp;тобой и&nbsp;обговорим
 							условия сотрудничества! <b>Удачи!</b>
 						</p>
 						<img class="become-author__decorate" src="assets/img/decorate.jpg" alt="" aria-hidden="true">
 					</div>
-					<form class="become-author-form" action="#">
+					<form class="become-author-form flex" action="#">
 						<label class="file">
 							<input class="file__input" type="file" name="file" accept="image/*">
+							<span class="file__icon"></span>
+							<span class="file__text">
+								Прикрепить работы (.jpeg / .png)
+							</span>
 						</label>
-						<span class="file__icon"></span>
-						<span class="file__text">
-							Прикрепить работы (.jpeg / .png)
-						</span>
 						<input class="form-input become-author-form__input" type="text" placeholder="@telegram_nickname"
 							name="nickname">
 						<button class="btn btn--fill btn-reset">
-							Отправить
+							<span class="btn__text">Отправить</span>
 						</button>
 					</form>
 				</div>
@@ -432,7 +430,7 @@
 				<h2 class="title top__title">
 					Топ продаж
 				</h2>
-				<ul class="top__list list-reset">
+				<ul class="top__list list-reset flex">
 					<li class="top__item">
 						<article class="top-product">
 							<div class="top__product__img">
@@ -602,11 +600,11 @@
 
 	<footer class="footer">
 		<div class="footer__top">
-			<div class="container">
+			<div class="container footer__container flex">
 				<a class="logo">
 					<img src="assets/svg/logo.svg" alt="Логотип компании аура">
 				</a>
-				<ul class="footer__list list-reset">
+				<ul class="footer__list list-reset flex">
 					<li class="footer__item">
 						Соглашение
 					</li>
@@ -618,11 +616,11 @@
 					</li>
 				</ul>
 			</div>
-			<div class="footer__bottom">
-				<span class="footer__text">
-					AURA<sup class="reg">&reg;</sup>&nbsp;| 2021
-				</span>
-			</div>
+		</div>
+		<div class="footer__bottom flex">
+			<span class="footer__text">
+				AURA<sup class="reg">&reg;</sup>&nbsp;| 2021
+			</span>
 		</div>
 	</footer>
 
