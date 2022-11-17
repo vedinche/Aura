@@ -822,9 +822,29 @@ transition: opacity var(--time) var(--style);
 	width: 100px;
 	height: 100px;
 	margin-bottom: calc(var(--gap) / 2);
+	border: 2px solid transparent;
 	border-radius: 100%;
+	color: var(--color-athens);
 	background-color: var(--color-light);
+	transition: border-color var(--time) var(--style), color var(--time) var(--style);
 }
+
+.file__input:focus + .file__icon {
+	border-color: var(--color-primary);
+	color: var(--color-primary);
+}
+
+.file:hover .file__icon {
+	border-color: var(--color-primary);
+	color: var(--color-primary);
+}
+
+.file:active .file__icon {
+	border-color: var(--color-primary-active);
+	color: var(--color-primary-active);
+}
+
+
 
 .file__icon::before {
 	content: '';
@@ -833,7 +853,7 @@ transition: opacity var(--time) var(--style);
 	top: 50%;
 	width: 40px;
 	height: 6px;
-	background-color: var(--color-athens);
+	background-color: currentColor;
 	transform: translate(-50%, -50%); 
 }
 
@@ -844,7 +864,7 @@ transition: opacity var(--time) var(--style);
 	top: 50%;
 	width: 6px;
 	height: 40px;
-	background-color: var(--color-athens);
+	background-color: currentColor;
 	transform: translate(-50%, -50%);
 }
 
